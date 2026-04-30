@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Study Vault</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <h2 class="logo">Vault</h2>
+        <ul>
+            <li><a href="index.html" class="active">Dashboard</a></li>
+            <li><a href="#">Library</a></li>
+            <li><a href="#">Exam Prep</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Dashboard Area -->
+    <main class="main-content">
+        <header>
+            <h1>Study Dashboard</h1>
+            <p>Save your resources instantly. No more searching.</p>
+        </header>
+
+        <!-- The Quick Capture Form -->
+        <section class="capture-card">
+            <h3>Add New Link</h3>
+            <div class="input-group">
+                <input type="text" id="titleInput" placeholder="Title (e.g., Unit 3 Notes)">
+                <input type="url" id="linkInput" placeholder="Paste URL here...">
+                <select id="subjectSelect">
+                    <option value="Python">Python</option>
+                    <option value="C++">C++</option>
+                    <option value="RRB NTPC">RRB NTPC</option>
+                    <option value="Animation">Animation</option>
+                </select>
+                <button onclick="saveResource()" class="save-btn">Save to Vault</button>
+            </div>
+        </section>
+
+        <!-- Where the saved links will appear -->
+        <section class="vault-display">
+            <h3>Recently Pinned</h3>
+            <div id="resourceGrid" class="grid">
+                <!-- JavaScript will inject cards here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
